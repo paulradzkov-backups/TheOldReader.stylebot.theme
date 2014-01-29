@@ -89,8 +89,13 @@
 	padding: 1em;
 	font-size: 16px;
 	line-height: 1.4;
+    clear: both;
 }
-
+pre,
+code {
+    font-size: 1em;
+    line-height: 1.4;
+}
 p code {
     font-size: 1em;
     line-height: 0.8;
@@ -138,9 +143,6 @@ abbr {
 	clear: left;
 	margin: 0 2em 1.5em 0;
 }
-.content pre {
-	clear: both;
-}
 .content img {
     width: inherit; /* for IE8 */
     max-width:100%;
@@ -151,7 +153,8 @@ abbr {
     margin: 2em auto;
 }
 .content figure img,
-.content div > img {
+.content div > img,
+.content div > a > img {
 	display: block;
 	margin: 1em 0;
 }
@@ -334,9 +337,13 @@ abbr {
 	border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
 	box-shadow: none;
 }
+.form-search .search-query {
+    border-radius: 1px;
+}
 
 /* bootstrap override */
-.btn {
+.btn,
+.label {
 	border-radius: 1px;
 }
 .well {
@@ -344,4 +351,10 @@ abbr {
 	background: #FFF;
 	border-color: #FFF;
 	box-shadow: none;
+}
+.navbar .nav li .dropdown-menu {
+    border-radius: 0;
+}
+.hero-unit.posts-filler span {
+    border-radius: 2px;
 }
