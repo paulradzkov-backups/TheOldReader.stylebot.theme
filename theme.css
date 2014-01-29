@@ -1,0 +1,347 @@
+/* Typography of the posts */
+
+
+/* headers and paragraphs */
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    line-height: 1.1;
+    clear: both;
+    font-weight: 600;
+}
+.content h1 {
+    margin-top: 2.5em;
+    font-size: 2.5em;
+    margin-bottom: 0.4em;
+}
+.content h2 {
+    margin-top: 2em;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+.content h3 {
+    margin-top: 2em;
+    font-size: 1.75em;
+    margin-bottom: 0.57143em;
+}
+.content h4 {
+	margin-top: 2em;
+    font-size: 1.5em;
+    margin-bottom: 0.66666em;
+}
+.content h5 {
+	margin-top: 2em;
+    font-size: 1.25em;
+    margin-bottom: 0.8em;
+}
+.content h6 {
+	margin-top: 2em;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+/* double headers */
+.content h1 + h2,
+.content h2 + h3,
+.content h3 + h4,
+.content h4 + h5,
+.content h5 + h6 {
+    margin-top: 1.5em;
+}
+
+/* first headers */
+.content h1:first-child,
+.content h2:first-child,
+.content h3:first-child,
+.content h4:first-child,
+.content h5:first-child,
+.content h6:first-child {
+  margin-top: 0;
+}
+
+.content p {
+    margin-top: 0;
+    line-height: inherit;
+}
+
+.content p + p {
+    margin-top: 1em;
+}
+
+.content p:last-child {
+    margin-bottom: 0;
+}
+
+/* minimum paragraph width when floating http://css-tricks.com/minimum-paragraph-widths/‎ */
+.content p:before,
+.content ol:before,
+.content ul:before {
+    content: '';
+    display: block;
+    width: 10em;
+    overflow: hidden;
+}
+.content li p:before {
+    content: none;
+}
+
+.content pre {
+	margin: 1em -1em;
+	border-radius: 0;
+	padding: 1em;
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+p code {
+    font-size: 1em;
+    line-height: 0.8;
+}
+sup,
+sub {
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.5em;
+}
+
+hr {
+    border:0;
+    margin:2em auto;
+    width:60%;
+}
+abbr {
+    letter-spacing: .05em;
+    margin-right: -.05em;
+}
+.content strong, 
+.content b, 
+.content dt {
+    font-weight: inherit;
+}
+.content-body strong, 
+.content-body b, 
+.content-body dt {
+    font-weight: bolder;
+}
+/* lists */
+.content ul, 
+.content li {
+	line-height: inherit;
+}
+
+/* images */
+.content p img {
+	float: left;
+	clear: left;
+	margin: 0 2em 1.5em 0;
+}
+.content pre {
+	clear: both;
+}
+.content img {
+    width: inherit; /* for IE8 */
+    max-width:100%;
+    height:auto;
+    -ms-interpolation-mode: bicubic; /* for IE7 */
+}
+.content figure {
+    margin: 2em auto;
+}
+.content figure img,
+.content div > img {
+	display: block;
+	margin: 1em 0;
+}
+.content div > img + p,
+.content figure > p,
+.content figcaption {
+    font-size: 0.8em;
+    margin-top: 0.625em;
+    margin-bottom: 0.625em;
+}
+.content figure {
+    margin: 2em auto;
+}
+.content figure > p,
+.content figcaption {
+    font-size: 0.8em;
+    margin-top: 0.625em;
+    margin-bottom: 0.625em;
+}
+
+/* lists without classes */
+.content ul:not([class]),
+.content ol:not([class]) {
+    list-style-type: none;
+    padding-left: 0;
+}
+.content ul:not([class]) li,
+.content ol:not([class]) li {
+    overflow: hidden;
+    padding-left: 2.5em;
+}
+.content ul:not([class]) > li:before {
+    content: '\2013'; /* mdash */
+    display: inline-block;
+    float: left;
+    width: 1.3em;
+    margin-left: -1.3em;
+}
+.content ol:not([class]) {
+    counter-reset: olist;
+}
+.content ol:not([class]) li:before {
+    direction: rtl;
+    content: "." counter(olist); 
+    counter-increment: olist;
+    display: inline-block;
+    float: left;
+    width: 0;
+    margin-left: -0.5em;
+    margin-right: 0.5em;
+    text-align: right;
+}
+/* nested lists */
+.content ul:not([class]) ul,
+.content ol:not([class]) ol {
+    margin-top: 0.5em;
+}
+.content ul:not([class]) li li,
+.content ol:not([class]) li li {
+    overflow: visible;
+}
+.content ul:not([class]) li li:before {
+    content: '\2212'; /* minus */
+}
+.content ul:not([class]) li li li:before {
+    content: '\22C5'; /* sdot */
+}
+.content ol:not([class]) ol {
+    counter-reset: olist2;
+}
+.content ol:not([class]) ol > li:before {
+    content: "." counter(olist) "." counter(olist2); 
+    counter-increment: olist2;
+}
+.content ol:not([class]) ol ol {
+    counter-reset: olist3;
+}
+.content ol:not([class]) ol ol > li:before {
+    content: "." counter(olist) "." counter(olist2) "." counter(olist3); 
+    counter-increment: olist3;
+}
+
+/* blockquotes */
+.content blockquote {
+    margin: 1em -2em;
+    padding: 1em 2em;
+}
+.content blockquote > cite {
+    display: block;
+    text-align: right;
+    padding-right: 1em;
+}
+.content blockquote p {
+	font-size: 16px;
+	margin: 1em 0;
+}
+
+/* definitions */
+.content dt {
+    display: run-in;
+    margin-left: -2.5em;
+    font-weight: bold;
+}
+.content dt:after {
+    content: ' ';
+}
+.content dd {
+    margin-left: 2.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* tables */
+.content table:not([class]) {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-collapse: collapse;
+}
+.content table:not([class]) caption {
+    text-align: right;
+    font-size: 0.8em;
+    margin-bottom: 0.625em;
+}
+.content table:not([class]) tr {
+    border-style: solid;
+    border-color: rgba(0,0,0,0.1);
+    border-width: 0 0 1px;
+}
+.content table:not([class]) th,
+.content table:not([class]) td {
+    padding: 0.5em 1em;
+    text-align: left;
+    vertical-align: top;
+}
+.content table:not([class]) thead th,
+.content table:not([class]) thead td {
+    vertical-align: bottom;
+    border-bottom-width: 2px;
+}
+
+/* theme override */
+
+/* container of posts */
+.list-post {
+	font-family: "Open Sans", "Segoe UI", Arial;
+	font-size: 16px;
+	line-height: 1.6;
+	background: #FFF;
+	padding: 1px;
+	margin-bottom: 10px;
+}
+.content {
+	padding-bottom: 2em;
+}
+.content-body {
+	max-width: 50em;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: visible;
+}
+
+/* title of the post */
+.list-post > h3:first-child {
+	margin: 1em auto 0.25em;
+	max-width: 25em;
+	font-size: 2em;
+	font-weight: 600;
+	line-height: 1.1;
+}
+/* author of the post */
+.list-post > h3 + .clearfix {
+	max-width: 50em;
+	margin: 0 auto 2em;
+}
+.post .btns {
+	text-align: center;
+}
+.subscribe .btn-primary {
+	border: 1px solid #eee;
+	border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	box-shadow: none;
+}
+
+/* bootstrap override */
+.btn {
+	border-radius: 1px;
+}
+.well {
+	border-radius: 0;
+	background: #FFF;
+	border-color: #FFF;
+	box-shadow: none;
+}
