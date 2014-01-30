@@ -352,6 +352,9 @@ abbr {
 	border-color: #FFF;
 	box-shadow: none;
 }
+.post.unread.well {
+    border-left: 4px solid #30a67c;
+}
 .navbar .nav li .dropdown-menu {
     border-radius: 0;
 }
