@@ -248,8 +248,11 @@ abbr {
     padding-right: 1em;
 }
 .content blockquote p {
-	font-size: 16px;
-	margin: 1em 0;
+    font-size: 16px;
+    margin: 0;
+}
+.content blockquote p + p {
+	margin-top: 1em;
 }
 
 /* definitions */
